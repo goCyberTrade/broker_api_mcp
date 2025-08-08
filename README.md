@@ -1,4 +1,6 @@
 <div align="center">
+  
+![image](https://github.com/goCyberTrade/ibkr_trade_mcp/blob/main/pics/multitrade.png)
 
 MCP Account Asset Query Example：
 

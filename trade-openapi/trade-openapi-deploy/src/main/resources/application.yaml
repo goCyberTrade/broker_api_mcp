@@ -1,0 +1,113 @@
+server:
+  port: 8080
+spring:
+  application:
+    name:  trade-openapi
+  ai:
+    mcp:
+      server:
+        enabled: true # 启用/禁用 MCP 服务器 默认:true
+        stdio: false # 启用/禁用 stdio 传输 默认:false
+        name: trade-openapi
+        version: 0.0.1
+        type: SYNC
+        sse-endpoint: /sse # 用于 Web 传输的自定义 SSE 终端节点路径 默认:/sse
+        sse-message-endpoint: /mcp/message # 客户端用于发送消息的 Web 传输的自定义 SSE 消息终端节点路径 默认:/mcp/message
+        tool-change-notification: true # 启用工具更改通知 默认:true
+        request-timeout: 60
+        capabilities:
+          tool: true
+          resource: true
+          prompt: true
+          completion: true
+openapi:
+  trade:
+    default-channel: ibkr
+    futu-default-env: 0 # 富途默认环境0:模拟 1:真实(用户配置项没有配置环境时用默认全局)
+longport:
+  app-key: 03850b63b3161f9f0d8705f585e3cc38
+  app-secret: d831be19d3e22a9f031e0d70d14e23bc1ab24ff8dbf0dfba432c3fea7b209984
+  access-token: m_eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJsb25nYnJpZGdlIiwic3ViIjoiYWNjZXNzX3Rva2VuIiwiZXhwIjoxNzU5Mzc1OTI4LCJpYXQiOjE3NTE1OTk5MjgsImFrIjoiMDM4NTBiNjNiMzE2MWY5ZjBkODcwNWY1ODVlM2NjMzgiLCJhYWlkIjoyMDg2MDA3MywiYWMiOiJsYl9wYXBlcnRyYWRpbmciLCJtaWQiOjIxODI0MTM3LCJzaWQiOiI1bVd4MG5zZ3VVQkxvcitkVUdtSzdRPT0iLCJibCI6MCwidWwiOjAsImlrIjoibGJfcGFwZXJ0cmFkaW5nXzIwODYwMDczIn0.JMHv5mdIIbpTAmY3GP8FLq48eWFbD5qVudKFVYMTMBO8_F0YW1S2EAhbRZh5jfmxUpNtOOWMzsYUq19Ze_GYivzMC2c65bh5FDQILl0ar26X9QqowKRCuO0efkiEFecBgc1vTP2xfHmbBecKZF5Xws0JBY5OTrGWkzSm-qnDI6ceHbuywrP-7ZYF87duYOqIyNx7zg7fZ2BPGiafEwGGwIgESXWSyufZRn1SqcEp1Atrv8-IvHWkbbSf_-kuiP2dGeHu4iVI-4WUMkS0esXiZpVNtQzJmujH7g2X7UuNp5sPA7SIbQz-6J0m1jyjviRiUkLS8j2yrrgXUiyg_-eTy43-qM6lu7W1A3dgFEfb8J9AGxTJyp8YprhZzmIisZjmII7b5p8fUg3eOoIszhoZph3txPMQSqBRUznyN_lepdsjdwWpWKKlCZaa-8IXL8AYp6w-veDBy4h-OMhErBHEWYZ3UgOtodNTkweks7ipX6imybRXA90TWn_6enXbD3Ez3LTWZqMOyyzxWDgjo6vTEEg0VVJDWlfBhQFS9DI2CEy5-E4LZjuJWIaIAQTBGOd6nJpoPksIocHjBOSVzYDRdRkRjvIA-wreG0dz5ROghIcXuiXWFK8LCcDwWPiJpJaHgb5aV1_-AccUFydA8zz5ZI0vDiQ6BMlQlnVXJeh4MIs
+
+api-key:
+  123: '{
+      "tiger": {
+          "tigerId": "20155918",
+          "account": "21648203424915730",
+          "privateKey": "MIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGBAKVEss2VHFHJC7IYN2CIarUPJK9voWpVdGJpkO8yDx6U93BRauI7efPx7PTV3zjAuNpmEnSapNtcq/QyeV0IdYm2Uvu6gDbeJqsbS1ranbYwgSLL/4IZcgK1fc1h8kjGCqqC4kU7DZPI/fse2bE8nOHF4eDLB3CgbQlpoT8UuIqbAgMBAAECgYBeekRhJCHZWz41ZISbycB+mxaUuBMlr45mCAVTyGE+UViWu+SHSgrwetfEK1N9pSbHq1xXjmQ6BuNCKWyZ05Ek5m/8oeB3mHZB7fiU9zD7ykkIq6mG/c7j23ASm5i1AV4BG/g0dwmwlPoSP2pBDpZ5leteToDUYBf//h9Ax6Tg0QJBAPfc9svgDBrzgPV971JDDl5Hsq0LV69YCWTimX+JEeB0mp7JiG1+ys8bLdJFyzrhcq8S0HkwLQD38NYaEG+hUCkCQQCqsZwZulIZz0iKG6bp0G4WQx7mCj0gvGJLpxzDfwO7AKlAhKtXxogZQII/nKz6sMQxJMohrH84oZXaPBZ05I0jAkEA4IBjiYYFcOPdin3mprvV589JJzN+2HMFDzuvjLS6XHNBGVGxIHwXdj9H4Y0V5t8M4UZJTXs1 SAtLOKGjAXk7AQJAUCBHkpwv5gWzm4EXfTJmOvUPEBVGVJOZ4MF1cx+wdJv+11ZvyChdwtzRR2MYoCVSM299owkCP2c6nNMQB5cx2QJAP9rDnvr9EZsTpMBXr9T53G+KWM0Sznk1mOg4+lQb3ubxsy9yuYkCpBaPhLlLdqt4QkZSveMW7Subk/w40TLmhQ=="
+      },
+      "longport": {
+          "appKey": "03850b63b3161f9f0d8705f585e3cc38",
+          "appSecret": "d831be19d3e22a9f031e0d70d14e23bc1ab24ff8dbf0dfba432c3fea7b209984",
+          "accessToken": "m_eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJsb25nYnJpZGdlIiwic3ViIjoiYWNjZXNzX3Rva2VuIiwiZXhwIjoxNzU5Mzc1OTI4LCJpYXQiOjE3NTE1OTk5MjgsImFrIjoiMDM4NTBiNjNiMzE2MWY5ZjBkODcwNWY1ODVlM2NjMzgiLCJhYWlkIjoyMDg2MDA3MywiYWMiOiJsYl9wYXBlcnRyYWRpbmciLCJtaWQiOjIxODI0MTM3LCJzaWQiOiI1bVd4MG5zZ3VVQkxvcitkVUdtSzdRPT0iLCJibCI6MCwidWwiOjAsImlrIjoibGJfcGFwZXJ0cmFkaW5nXzIwODYwMDczIn0.JMHv5mdIIbpTAmY3GP8FLq48eWFbD5qVudKFVYMTMBO8_F0YW1S2EAhbRZh5jfmxUpNtOOWMzsYUq19Ze_GYivzMC2c65bh5FDQILl0ar26X9QqowKRCuO0efkiEFecBgc1vTP2xfHmbBecKZF5Xws0JBY5OTrGWkzSm-qnDI6ceHbuywrP-7ZYF87duYOqIyNx7zg7fZ2BPGiafEwGGwIgESXWSyufZRn1SqcEp1Atrv8-IvHWkbbSf_-kuiP2dGeHu4iVI-4WUMkS0esXiZpVNtQzJmujH7g2X7UuNp5sPA7SIbQz-6J0m1jyjviRiUkLS8j2yrrgXUiyg_-eTy43-qM6lu7W1A3dgFEfb8J9AGxTJyp8YprhZzmIisZjmII7b5p8fUg3eOoIszhoZph3txPMQSqBRUznyN_lepdsjdwWpWKKlCZaa-8IXL8AYp6w-veDBy4h-OMhErBHEWYZ3UgOtodNTkweks7ipX6imybRXA90TWn_6enXbD3Ez3LTWZqMOyyzxWDgjo6vTEEg0VVJDWlfBhQFS9DI2CEy5-E4LZjuJWIaIAQTBGOd6nJpoPksIocHjBOSVzYDRdRkRjvIA-wreG0dz5ROghIcXuiXWFK8LCcDwWPiJpJaHgb5aV1_-AccUFydA8zz5ZI0vDiQ6BMlQlnVXJeh4MIs"
+      },
+      "usmart": {
+          "phoneNumber": "phoneNumber",
+          "password": "password",
+          "privateKey": "privateKey",
+          "publicKey": "publicKey"
+      },
+      "futu": {
+          "userID": "2852495",
+          "tradePassword": "123456",
+          "opendIP": "127.0.0.1",
+          "opendPort": "11111"
+      },
+      "ibkr": {
+          "host": "https://localhost:5000"
+      }
+  }'
+  456: '{
+      "tiger": {
+          "tigerId": "20155918",
+          "account": "21648203424915730",
+          "privateKey": "MIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGBAKVEss2VHFHJC7IYN2CIarUPJK9voWpVdGJpkO8yDx6U93BRauI7efPx7PTV3zjAuNpmEnSapNtcq/QyeV0IdYm2Uvu6gDbeJqsbS1ranbYwgSLL/4IZcgK1fc1h8kjGCqqC4kU7DZPI/fse2bE8nOHF4eDLB3CgbQlpoT8UuIqbAgMBAAECgYBeekRhJCHZWz41ZISbycB+mxaUuBMlr45mCAVTyGE+UViWu+SHSgrwetfEK1N9pSbHq1xXjmQ6BuNCKWyZ05Ek5m/8oeB3mHZB7fiU9zD7ykkIq6mG/c7j23ASm5i1AV4BG/g0dwmwlPoSP2pBDpZ5leteToDUYBf//h9Ax6Tg0QJBAPfc9svgDBrzgPV971JDDl5Hsq0LV69YCWTimX+JEeB0mp7JiG1+ys8bLdJFyzrhcq8S0HkwLQD38NYaEG+hUCkCQQCqsZwZulIZz0iKG6bp0G4WQx7mCj0gvGJLpxzDfwO7AKlAhKtXxogZQII/nKz6sMQxJMohrH84oZXaPBZ05I0jAkEA4IBjiYYFcOPdin3mprvV589JJzN+2HMFDzuvjLS6XHNBGVGxIHwXdj9H4Y0V5t8M4UZJTXs1 SAtLOKGjAXk7AQJAUCBHkpwv5gWzm4EXfTJmOvUPEBVGVJOZ4MF1cx+wdJv+11ZvyChdwtzRR2MYoCVSM299owkCP2c6nNMQB5cx2QJAP9rDnvr9EZsTpMBXr9T53G+KWM0Sznk1mOg4+lQb3ubxsy9yuYkCpBaPhLlLdqt4QkZSveMW7Subk/w40TLmhQ=="
+      },
+      "longport": {
+          "appKey": "53fa9c6b0da7a2afe9eead5784744e00",
+          "appSecret": "9c1b851b9123833bae4d954f1a93c1ce01121dfc019b3ee778438fe7fdbaca85",
+          "accessToken": "m_eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJsb25nYnJpZGdlIiwic3ViIjoiYWNjZXNzX3Rva2VuIiwiZXhwIjoxNzYwMzQ2OTQxLCJpYXQiOjE3NTI1NzA5NDMsImFrIjoiNTNmYTljNmIwZGE3YTJhZmU5ZWVhZDU3ODQ3NDRlMDAiLCJhYWlkIjoyMDg5Njc2NCwiYWMiOiJsYl9wYXBlcnRyYWRpbmciLCJtaWQiOjE5NDc4NjI1LCJzaWQiOiJuQS9UWFhYT3NCOFlTOXdZaXdMeGNRPT0iLCJibCI6MCwidWwiOjAsImlrIjoibGJfcGFwZXJ0cmFkaW5nXzIwODk2NzY0In0.hNn-9TE04RDFM-oCGKdxw4KXaXFZHj_g0XEBDekItlJOyAQEKvTzmwcAssDVCTY5giTK9_mXlDnmEGrJ5TffIMcmQmcDiCfLku7tXaoFOvPwCRCD_dAAOsk7vjPBisRPPcoRKi2O3DVLOFWm9WJwdIMEKbp5o77hntubWGO30wIZTL_0qm3Be1wn_fOdVpucS_juQiS7bQSMjvGj34qNccyghLsa_8KyUbHWSxllN_5R90yNkvEtd3wPMZe4wQxpGwq1PM23KxLpM-z5HnIWkuZQbTADeJNE9UVG4MB9HZ239Sjh6cfRXFgXC_wxgRnE9vbw8bgFaqRVQkDBlq7Lr7pRvjyk2b550RwyCkyV1UCD4IXMzX1zhjZlmVpHczDpvtEOiDXJA1ZxFjZa1nReLMPAOZmNXFBD6usla9rU3pMJNDkj4U5o0ZMbAGj3Eh6aum2f6_KeIuEZXIVg6b0J0pkB7H03kX39nzmf9zOJcbiOeHWigTtnUxU0UaR35M-Q_uVaewW-YEPQM5bZyrIm1l6HNGqcgjFeqRsC4bi1fquykvYIqKzK8jCqPs6a3-DfkRLT4c4lRh8zr1FszMfOwCLbeGhtJkLHQvPshXyjMq1CL-9kbJ9e9Hz2yaZNmakw9fFSAxiCosp4n1ZJA1vN-IrLGLJKftmiT8-xrH9_13s"
+      },
+      "usmart": {
+          "phoneNumber": "phoneNumber",
+          "password": "password",
+          "privateKey": "privateKey",
+          "publicKey": "publicKey"
+      },
+      "futu": {
+          "userID": "2852495",
+          "tradePassword": "123456",
+          "opendIP": "127.0.0.1",
+          "opendPort": "11111"
+      },
+      "ibkr": {
+          "host": "http://localhost:5050"
+      }
+  }'
+  789: '{
+      "tiger": {
+          "tigerId": "20155918",
+          "account": "21648203424915730",
+          "privateKey": "MIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGBAKVEss2VHFHJC7IYN2CIarUPJK9voWpVdGJpkO8yDx6U93BRauI7efPx7PTV3zjAuNpmEnSapNtcq/QyeV0IdYm2Uvu6gDbeJqsbS1ranbYwgSLL/4IZcgK1fc1h8kjGCqqC4kU7DZPI/fse2bE8nOHF4eDLB3CgbQlpoT8UuIqbAgMBAAECgYBeekRhJCHZWz41ZISbycB+mxaUuBMlr45mCAVTyGE+UViWu+SHSgrwetfEK1N9pSbHq1xXjmQ6BuNCKWyZ05Ek5m/8oeB3mHZB7fiU9zD7ykkIq6mG/c7j23ASm5i1AV4BG/g0dwmwlPoSP2pBDpZ5leteToDUYBf//h9Ax6Tg0QJBAPfc9svgDBrzgPV971JDDl5Hsq0LV69YCWTimX+JEeB0mp7JiG1+ys8bLdJFyzrhcq8S0HkwLQD38NYaEG+hUCkCQQCqsZwZulIZz0iKG6bp0G4WQx7mCj0gvGJLpxzDfwO7AKlAhKtXxogZQII/nKz6sMQxJMohrH84oZXaPBZ05I0jAkEA4IBjiYYFcOPdin3mprvV589JJzN+2HMFDzuvjLS6XHNBGVGxIHwXdj9H4Y0V5t8M4UZJTXs1 SAtLOKGjAXk7AQJAUCBHkpwv5gWzm4EXfTJmOvUPEBVGVJOZ4MF1cx+wdJv+11ZvyChdwtzRR2MYoCVSM299owkCP2c6nNMQB5cx2QJAP9rDnvr9EZsTpMBXr9T53G+KWM0Sznk1mOg4+lQb3ubxsy9yuYkCpBaPhLlLdqt4QkZSveMW7Subk/w40TLmhQ=="
+      },
+      "longport": {
+          "appKey": "03850b63b3161f9f0d8705f585e3cc38",
+          "appSecret": "d831be19d3e22a9f031e0d70d14e23bc1ab24ff8dbf0dfba432c3fea7b209984",
+          "accessToken": "m_eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJsb25nYnJpZGdlIiwic3ViIjoiYWNjZXNzX3Rva2VuIiwiZXhwIjoxNzU5Mzc1OTI4LCJpYXQiOjE3NTE1OTk5MjgsImFrIjoiMDM4NTBiNjNiMzE2MWY5ZjBkODcwNWY1ODVlM2NjMzgiLCJhYWlkIjoyMDg2MDA3MywiYWMiOiJsYl9wYXBlcnRyYWRpbmciLCJtaWQiOjIxODI0MTM3LCJzaWQiOiI1bVd4MG5zZ3VVQkxvcitkVUdtSzdRPT0iLCJibCI6MCwidWwiOjAsImlrIjoibGJfcGFwZXJ0cmFkaW5nXzIwODYwMDczIn0.JMHv5mdIIbpTAmY3GP8FLq48eWFbD5qVudKFVYMTMBO8_F0YW1S2EAhbRZh5jfmxUpNtOOWMzsYUq19Ze_GYivzMC2c65bh5FDQILl0ar26X9QqowKRCuO0efkiEFecBgc1vTP2xfHmbBecKZF5Xws0JBY5OTrGWkzSm-qnDI6ceHbuywrP-7ZYF87duYOqIyNx7zg7fZ2BPGiafEwGGwIgESXWSyufZRn1SqcEp1Atrv8-IvHWkbbSf_-kuiP2dGeHu4iVI-4WUMkS0esXiZpVNtQzJmujH7g2X7UuNp5sPA7SIbQz-6J0m1jyjviRiUkLS8j2yrrgXUiyg_-eTy43-qM6lu7W1A3dgFEfb8J9AGxTJyp8YprhZzmIisZjmII7b5p8fUg3eOoIszhoZph3txPMQSqBRUznyN_lepdsjdwWpWKKlCZaa-8IXL8AYp6w-veDBy4h-OMhErBHEWYZ3UgOtodNTkweks7ipX6imybRXA90TWn_6enXbD3Ez3LTWZqMOyyzxWDgjo6vTEEg0VVJDWlfBhQFS9DI2CEy5-E4LZjuJWIaIAQTBGOd6nJpoPksIocHjBOSVzYDRdRkRjvIA-wreG0dz5ROghIcXuiXWFK8LCcDwWPiJpJaHgb5aV1_-AccUFydA8zz5ZI0vDiQ6BMlQlnVXJeh4MIs"
+      },
+      "usmart": {
+          "phoneNumber": "phoneNumber",
+          "password": "password",
+          "privateKey": "privateKey",
+          "publicKey": "publicKey"
+      },
+      "futu": {
+          "userID": "2852495",
+          "tradePassword": "123456",
+          "opendIP": "127.0.0.1",
+          "opendPort": "11111"
+      },
+      "ibkr": {
+          "host": "http://localhost:5050"
+      }
+  }'

@@ -1,0 +1,25 @@
+version: '3.8'
+# docker-compose -f docker-compose-app.yml up -d
+# 你需要修改system为你自身系统的仓库名
+services:
+  xfg-dev-tech:
+    image: ebang/trade-openapi:1.0
+    container_name: trade-openapi
+    restart: on-failure
+    ports:
+      - "8091:8091"
+    environment:
+      - TZ=PRC
+      - SERVER_PORT=8091
+      - JAVA_OPTS=-Xms2048m -Xmx2048m
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    networks:
+      - my-network
+
+networks:
+  my-network:
+    driver: bridge

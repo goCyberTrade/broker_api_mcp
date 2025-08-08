@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.ebang.openapi</groupId>
+        <artifactId>trade-openapi</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>trade-openapi-service</artifactId>
+
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.ebang.openapi</groupId>
+            <artifactId>trade-openapi-common</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.ai</groupId>
+            <artifactId>spring-ai-starter-mcp-server-webmvc</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+        </dependency>
+
+        <!--     长桥证券 SDK       -->
+        <dependency>
+            <groupId>io.github.longportapp</groupId>
+            <artifactId>openapi-sdk</artifactId>
+            <exclusions>
+                <exclusion>
+                    <artifactId>slf4j-api</artifactId>
+                    <groupId>org.slf4j</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <!-- 富途证券 -->
+        <dependency>
+            <groupId>com.futunn.openapi</groupId>
+            <artifactId>futu-api</artifactId>
+        </dependency>
+
+        <!-- webull -->
+        <dependency>
+            <groupId>com.webull.openapi</groupId>
+            <artifactId>webull-java-sdk-trade</artifactId>
+        </dependency>
+
+        <!-- 华盛通 -->
+        <dependency>
+            <groupId>com.huasheng.quant.open</groupId>
+            <artifactId>java-hs-gateway-api</artifactId>
+            <version>1.0.5</version>
+<!--            <scope>system</scope>-->
+<!--            <systemPath>${project.basedir}/src/main/resources/lib/java-hs-gateway-api-1.0.5.jar</systemPath>-->
+        </dependency>
+        <!-- 本地代码报错的时候放开上面两行注释或者把jar推送到本地maven仓库  -->
+        <!-- 在MAVEN_HOME下执行以下命令  替换jar路径 -->
+        <!-- mvn install:install-file -DgroupId=com.huasheng.quant.open -DartifactId=java-hs-gateway-api -Dversion=1.0.5 -Dpackaging=jar -Dfile=java-hs-gateway-api-1.0.5.jar -DlocalRepositoryPath=D:\\Repository -->
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+        </dependency>
+    </dependencies>
+</project>

@@ -8,7 +8,28 @@ MCP Account Asset Query Example：
 
 </div>
 
-# Broker API Trading MCP Tools
+# Multi-Broker API Trading MCP Tools
+
+## Table of contents
+- [Overview](https://github.com/goCyberTrade/broker_api_mcp/blob/main/README.md#overview)
+
+- [1.Environment Setup](https://github.com/goCyberTrade/broker_api_mcp/blob/main/README.md#1-environment-setup)
+
+  - [1.1 Install JDK](https://github.com/goCyberTrade/broker_api_mcp/blob/main/README.md#11-install-jdk)
+  
+- [2. Broker API MCP Tool Installation & Startup](https://github.com/goCyberTrade/broker_api_mcp/blob/main/README.md#2-broker-api-mcp-tool-installation--startup)
+
+  - [2.1 Broker API MCP Server Installation](https://github.com/goCyberTrade/broker_api_mcp/blob/main/README.md#21-broker-api-mcp-server-installation)
+  
+  - [2.2 Start Server](https://github.com/goCyberTrade/broker_api_mcp/blob/main/README.md#22-start-server)
+    - [Option 1: SSE Mode (Recommended)](https://github.com/goCyberTrade/broker_api_mcp/blob/main/README.md#option-1-sse-mode-recommended)
+  
+    
+- [3. Using MCP Tools in Development Environments](https://github.com/goCyberTrade/broker_api_mcp/blob/main/README.md#3-using-mcp-tools-in-development-environments)
+
+  - [3.1 Cursor IDE Integration](https://github.com/goCyberTrade/broker_api_mcp/blob/main/README.md#31-cursor-ide-integration)
+  
+  - [3.2 VS Code Integration](https://github.com/goCyberTrade/broker_api_mcp/blob/main/README.md#32-vs-code-integration)
 
 ## Overview
 Provides MCP interface encapsulation for mainstream brokerage account and transaction type APIs, supporting brokers including Interactive Brokers, RobinHood, Futu Brokers, Tiger Brokers, Webull, uSMART，LongPort

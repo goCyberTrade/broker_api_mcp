@@ -37,15 +37,15 @@ AI-Powered Multi-Brokerage Trading via MCP Server
 
 Our MCP Server integrates multiple brokerage platforms into a single, unified interface. By simply providing the API key for their brokerage account, users can leverage the capabilities of advanced AI language models to execute trades, manage orders, and access market data — all in natural language.
 
-Key Features:
+**Key Features**
 
-Multi-Brokerage Support – Connect and trade across different brokers from one server.
+**Multi-Brokerage Support** – Connect and trade across different brokers from one server.
 
-API Key Authentication – Securely link your brokerage account using your unique API key.
+**API Key Authentication** – Securely link your brokerage account using your unique API key.
 
-AI-Assisted Trading – Use large language models to place orders, modify or cancel trades, and query real-time market information through intuitive conversations.
+**AI-Assisted Trading** – Use large language models to place orders, modify or cancel trades, and query real-time market information through intuitive conversations.
 
-Flexible Workflows – Supports both direct user commands and strategy-based automated execution.
+**Flexible Workflows** – Supports both direct user commands and strategy-based automated execution.
 
 This setup empowers traders and developers to combine the strengths of their preferred broker with the reasoning and automation of AI, streamlining the entire trading process.
 

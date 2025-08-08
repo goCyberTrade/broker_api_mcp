@@ -98,6 +98,19 @@ testKey Configuration example:
       },
       "ibkr": {
           "host": "IB Gateway IP address"
+      },
+      "webull": {
+          "appKey": "webull appKey",
+          "appSecret": "webull appSecret"
+      },
+      "hstong": {
+          "ip": "hstong ip",
+          "httpPort": "hstong httpPort",
+		  "tcpPort": "hstong tcpPort"
+      },
+      "robinhood": {
+          "username": "robinhood username",
+          "password": "password password"
       }
   }
    ```

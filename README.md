@@ -1,7 +1,5 @@
 <div align="center">
 
-![image](https://github.com/goCyberTrade/ibkr_trade_mcp/blob/main/pics/ebtech.png)
-
 MCP Account Asset Query Example：
 
 ![image](https://github.com/goCyberTrade/ibkr_trade_mcp/blob/main/pics/cursor.gif)

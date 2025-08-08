@@ -32,7 +32,7 @@ MCP Account Asset Query Example：
   - [3.2 VS Code Integration](https://github.com/goCyberTrade/broker_api_mcp/blob/main/README.md#32-vs-code-integration)
 
 ## Overview
-Provides MCP interface encapsulation for mainstream brokerage account and transaction type APIs, supporting brokers including Interactive Brokers, RobinHood, Futu Brokers, Tiger Brokers, Webull, uSMART，LongPort
+Provides MCP interface encapsulation for mainstream brokerage account and transaction type APIs, supporting brokers including Interactive Brokers, RobinHood, Futu Brokers, Tiger Brokers, Webull, uSMART, LongPort
 
 
 ## 1. Environment Setup
